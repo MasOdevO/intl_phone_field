@@ -450,7 +450,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
     );
   }
 
-  Container buildFlagsButton() {
+  export Container buildFlagsButton() {
     return Container(
       margin: widget.flagsButtonMargin,
       child: DecoratedBox(
