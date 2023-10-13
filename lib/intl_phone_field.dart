@@ -245,7 +245,6 @@ class IntlPhoneField extends StatefulWidget {
 
   // custom props
   final double fieldWidth;
-  final double fieldHeight;
   final Widget prefixIcon;
   final double span;
 
@@ -254,7 +253,6 @@ class IntlPhoneField extends StatefulWidget {
     this.initialCountryCode,
     this.span = 0.0,
     required this.fieldWidth,
-    required this.fieldHeight,
     this.prefixIcon = const Icon(Icons.phone),
     this.languageCode = 'en',
     this.disableAutoFillHints = false,
@@ -393,7 +391,6 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
       children: [
         SizedBox(
           width: widget.fieldWidth,
-          height: widget.fieldHeight,
           child: TextFormField(
             initialValue: (widget.controller == null) ? number : null,
             autofillHints: widget.disableAutoFillHints
