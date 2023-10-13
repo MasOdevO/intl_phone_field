@@ -245,6 +245,8 @@ class IntlPhoneField extends StatefulWidget {
 
   // custom props
   final double fieldWidth;
+  final double flagWidth;
+  final double flagHeight;
   final Widget prefixIcon;
   final double span;
 
@@ -253,6 +255,8 @@ class IntlPhoneField extends StatefulWidget {
     this.initialCountryCode,
     this.span = 0.0,
     required this.fieldWidth,
+    required this.flagWidth,
+    required this.flagHeight,
     this.prefixIcon = const Icon(Icons.phone),
     this.languageCode = 'en',
     this.disableAutoFillHints = false,
@@ -470,6 +474,8 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
 
   Container _buildFlagsButton() {
     return Container(
+      width: widget.flagWidth,
+      height: widget.flagHeight,
       margin: widget.flagsButtonMargin,
       child: DecoratedBox(
         decoration: widget.dropdownDecoration,
