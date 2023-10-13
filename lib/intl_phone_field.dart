@@ -388,6 +388,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
           width: widget.fieldWidth,
