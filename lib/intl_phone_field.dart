@@ -501,6 +501,12 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                   widget.dropdownIcon,
                   const SizedBox(width: 4),
                 ],
+                FittedBox(
+                  child: Text(
+                    '+${_selectedCountry.dialCode}',
+                    style: widget.dropdownTextStyle,
+                  ),
+                ),
                 if (widget.showCountryFlag) ...[
                   kIsWeb
                       ? Image.asset(
@@ -514,12 +520,6 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                         ),
                   const SizedBox(width: 8),
                 ],
-                FittedBox(
-                  child: Text(
-                    '+${_selectedCountry.dialCode}',
-                    style: widget.dropdownTextStyle,
-                  ),
-                ),
                 if (widget.enabled &&
                     widget.showDropdownIcon &&
                     widget.dropdownIconPosition == IconPosition.trailing) ...[
