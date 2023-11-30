@@ -507,6 +507,9 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                     style: widget.dropdownTextStyle,
                   ),
                 ),
+                
+                 const SizedBox(width: 4),
+                
                 if (widget.showCountryFlag) ...[
                   kIsWeb
                       ? Image.asset(
@@ -518,7 +521,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                           _selectedCountry.flag,
                           style: const TextStyle(fontSize: 18),
                         ),
-                  const SizedBox(width: 8),
+                  const SizedBox(width: 4),
                 ],
                 if (widget.enabled &&
                     widget.showDropdownIcon &&
